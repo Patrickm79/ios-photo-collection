@@ -21,17 +21,14 @@ class ThemeSelectionViewController: UIViewController {
     
     @IBAction func darkThemeTapped(_ sender: Any) {
         themeHelper?.setThemePreferenceToDark()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func redThemeTapped(_ sender: Any) {
         themeHelper?.SetThemePreferenceToYourColorHere()
-    }
-    
-    @IBAction func doneTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
+    /*    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
