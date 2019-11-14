@@ -49,6 +49,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4S-Gc-RKH">
+                                <rect key="frame" x="189" y="652" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneTapped:" destination="XJL-xq-umm" eventType="touchUpInside" id="61A-DL-J2p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -72,30 +80,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2vr-9D-GDr">
-                            <size key="itemSize" width="181" height="157"/>
+                            <size key="itemSize" width="232" height="223"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomPhotoCell" id="OEf-fY-n9x" customClass="PhotosCollectionViewCell" customModule="PhotoCollection" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="OEf-fY-n9x" customClass="PhotosCollectionViewCell" customModule="PhotoCollection" customModuleProvider="target">
+                                <rect key="frame" x="91" y="0.0" width="232" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GCE-N6-ozx">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="232" height="223"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUj-Qe-Vb8">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="232" height="223"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A1Q-TB-WUW">
-                                                    <rect key="frame" x="11" y="11" width="128.5" height="128.5"/>
+                                                    <rect key="frame" x="28.5" y="24" width="175.5" height="175.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2R-zs-BZc">
-                                                            <rect key="frame" x="14" y="0.0" width="100" height="100"/>
+                                                            <rect key="frame" x="6" y="0.0" width="163" height="147"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdj-wa-ftm">
-                                                            <rect key="frame" x="43" y="108" width="42" height="20.5"/>
+                                                            <rect key="frame" x="66.5" y="155" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -120,7 +128,7 @@
                                         <constraint firstItem="OUj-Qe-Vb8" firstAttribute="leading" secondItem="GCE-N6-ozx" secondAttribute="leading" id="xeZ-MD-tJB"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="150" height="150"/>
+                                <size key="customSize" width="232" height="223"/>
                                 <connections>
                                     <outlet property="imageOutlet" destination="c2R-zs-BZc" id="YuP-Jr-E5P"/>
                                     <outlet property="labelOutlet" destination="hdj-wa-ftm" id="dMT-I2-s8f"/>
@@ -136,7 +144,7 @@
                     <navigationItem key="navigationItem" id="ScJ-au-jLn">
                         <barButtonItem key="leftBarButtonItem" title="Select Theme" id="hfF-iX-uPW">
                             <connections>
-                                <segue destination="XJL-xq-umm" kind="presentation" identifier="ThemeSelectionSegue" modalPresentationStyle="fullScreen" id="J91-kB-lCT"/>
+                                <segue destination="XJL-xq-umm" kind="presentation" identifier="themeSelectionSegue" modalPresentationStyle="fullScreen" id="J91-kB-lCT"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="QXw-9R-Tiz">
